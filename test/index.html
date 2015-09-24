@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Animating Wall</title>
+  <script type="text/javascript" src="../dist/js/requirejs/require.js"></script>
+</head>
+<body>
+	<div id="app">
+
+	</div>
+	<section id="wall">
+        <div id="wallCanvas"></div>
+    </section>
+	<script type="text/javascript" src="../dist/js/wall.min.js"></script>
+	<script type="text/javascript">
+
+	//Override the base url if the html file is not in the root directory of the js directory
+	requirejs.config({
+		baseUrl: '../dist/js',
+	});
+
+	//Configuration
+	require(['jQuery', 'Wall'], function($) {
+
+			  var properties = {
+						wallRows: 6,
+						wallCols: 10,
+						startRow: 2,
+						startCol: 3,
+						// The img src path is relative to the html page
+						textureSrc: [
+							'img/Bricks/brick_old_03.png',
+							'img/Bricks/brick_old_1_03.png',
+							'img/Bricks/brick_old_2_03.png',
+							'img/Bricks/brick_old_4_03.png',
+							'img/Bricks/brick_old_5_03.png'
+						],
+						textureWidth: 225,
+						textureHeight: 70,
+						xRowOffset: -100,
+						yRowOffset: 35,
+						startButtonSpriteSheet: {
+								spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
+								spriteNameList : [
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png",
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png",
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png",
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png",
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", 
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", 
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", 
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", 
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", 
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png"
+								],
+						}
+				};
+	$('#wall').AddWallAnimation(properties);
+	
+});
+	</script>
+</body>
+</html>

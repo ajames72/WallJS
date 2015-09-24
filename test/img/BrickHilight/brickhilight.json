@@ -1,0 +1,76 @@
+{"frames": {
+
+"brickHi_A1.png":
+{
+	"frame": {"x":2,"y":2,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A2.png":
+{
+	"frame": {"x":231,"y":2,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A3.png":
+{
+	"frame": {"x":2,"y":79,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A4.png":
+{
+	"frame": {"x":231,"y":79,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A5.png":
+{
+	"frame": {"x":2,"y":156,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A6.png":
+{
+	"frame": {"x":231,"y":156,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A7.png":
+{
+	"frame": {"x":2,"y":233,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+},
+"brickHi_A8.png":
+{
+	"frame": {"x":231,"y":233,"w":227,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":227,"h":75},
+	"sourceSize": {"w":227,"h":75}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "brickhilight.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2cba9224a0e8bf101456f890ca686c44:3ffe86dfb1f0dcf9732befaea03b1b37:5d202af467a05d61a6136b5367bd1f39$"
+}
+}
