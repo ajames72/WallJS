@@ -40,7 +40,8 @@
     "grunt-template-jasmine-requirejs": "^0.2.2",
     "jquery": "~2.1.1",
     "pixi": "^0.3.1",
-    "requirejs": "~2.1.15"
+    "requirejs": "~2.1.15",
+    "simplestatemanager": "^3.0.0"
   },
   "keywords": []
 }

@@ -9,8 +9,8 @@
 
 	</div>
 	<section id="wall">
-        <div id="wallCanvas"></div>
-    </section>
+		<div id="wallCanvas"></div>
+	</section>
 	<script type="text/javascript" src="../dist/js/wall.min.js"></script>
 	<script type="text/javascript">
 
@@ -20,26 +20,40 @@
 	});
 
 	//Configuration
-	require(['jQuery', 'Wall'], function($) {
+	require(['jQuery', 'ssm', 'Wall'], function($, ssm) {
 
-			  var properties = {
-						wallRows: 6,
-						wallCols: 10,
-						startRow: 2,
-						startCol: 3,
-						// The img src path is relative to the html page
-						textureSrc: [
-							'img/Bricks/brick_old_03.png',
-							'img/Bricks/brick_old_1_03.png',
-							'img/Bricks/brick_old_2_03.png',
-							'img/Bricks/brick_old_4_03.png',
-							'img/Bricks/brick_old_5_03.png'
-						],
-						textureWidth: 225,
-						textureHeight: 70,
-						xRowOffset: -100,
-						yRowOffset: 35,
-						startButtonSpriteSheet: {
+			var properties = undefined;
+
+			ssm.addStates([
+				{
+					id: 'mobile',
+					query: '(max-width: 767px)',
+					onEnter: function(){
+						console.log('enter mobile');
+						properties = {
+							// The rows and width is measured in the number of icons
+							wallRows: 2,
+							wallCols: 3,
+							// This is the icon in the wall where the start button should overlay
+							startRow: 2,
+							startCol: 2,
+							// The img src path is relative to the html page
+							textureSrc: [
+								'img/Bricks/brick_old_03.png',
+								'img/Bricks/brick_old_1_03.png',
+								'img/Bricks/brick_old_2_03.png',
+								'img/Bricks/brick_old_4_03.png',
+								'img/Bricks/brick_old_5_03.png'
+							],
+							// The texture height and width of the textureSrc.
+							// This can be smaller that the actual height and width in order to overlap icons
+							textureWidth: 225,
+							textureHeight: 70,
+							// The xRowOffset offsets every second row to give brick laying effect
+							xRowOffset: -100,
+							// The yRowOffset 
+							yRowOffset: 35,
+							startButtonSpriteSheet: {
 								spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
 								spriteNameList : [
 									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png",
@@ -58,9 +72,129 @@
 									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", 
 									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png"
 								],
-						}
-				};
-	$('#wall').AddWallAnimation(properties);
+							}
+						};
+
+						$('#wall').empty();
+						$('#wall').AddWallAnimation(properties);
+					}
+				},
+				{
+					id: 'tablet',
+					query: '(min-width: 768px) and (max-width: 1023px)',
+					onEnter: function(){
+						console.log('enter tablet');
+						properties = {
+							// The rows and width is measured in the number of icons
+							wallRows: 3,
+							wallCols: 5,
+							// This is the icon in the wall where the start button should overlay
+							startRow: 2,
+							startCol: 2,
+							// The img src path is relative to the html page
+							textureSrc: [
+								'img/Bricks/brick_old_03.png',
+								'img/Bricks/brick_old_1_03.png',
+								'img/Bricks/brick_old_2_03.png',
+								'img/Bricks/brick_old_4_03.png',
+								'img/Bricks/brick_old_5_03.png'
+							],
+							// The texture height and width of the textureSrc.
+							// This can be smaller that the actual height and width in order to overlap icons
+							textureWidth: 225,
+							textureHeight: 70,
+							// The xRowOffset offsets every second row to give brick laying effect
+							xRowOffset: -100,
+							// The yRowOffset 
+							yRowOffset: 35,
+							startButtonSpriteSheet: {
+								spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
+								spriteNameList : [
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png",
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png",
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png",
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png",
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", 
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", 
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", 
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", 
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", 
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png"
+								],
+							}
+						};
+
+						$('#wall').empty();
+						$('#wall').AddWallAnimation(properties);
+					}
+				},
+				{
+					id: 'desktop',
+					query: '(min-width: 1024px)',
+					onEnter: function(){
+						console.log('enter desktop');
+
+						properties = {
+							// The rows and width is measured in the number of icons
+							wallRows: 6,
+							wallCols: 10,
+							// This is the icon in the wall where the start button should overlay
+							startRow: 2,
+							startCol: 3,
+							// The img src path is relative to the html page
+							textureSrc: [
+								'img/Bricks/brick_old_03.png',
+								'img/Bricks/brick_old_1_03.png',
+								'img/Bricks/brick_old_2_03.png',
+								'img/Bricks/brick_old_4_03.png',
+								'img/Bricks/brick_old_5_03.png'
+							],
+							// The texture height and width of the textureSrc.
+							// This can be smaller that the actual height and width in order to overlap icons
+							textureWidth: 225,
+							textureHeight: 70,
+							// The xRowOffset offsets every second row to give brick laying effect
+							xRowOffset: -100,
+							// The yRowOffset 
+							yRowOffset: 35,
+							startButtonSpriteSheet: {
+								spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
+								spriteNameList : [
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png",
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png",
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png",
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png",
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png", "brickHi_A8.png",
+									"brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png", "brickHi_A7.png",
+									"brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", "brickHi_A6.png", 
+									"brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", "brickHi_A5.png", 
+									"brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", "brickHi_A4.png", 
+									"brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", "brickHi_A3.png", 
+									"brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", "brickHi_A2.png", 
+									"brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png", "brickHi_A1.png"
+								],
+							}
+						};
+
+						$('#wall').empty();
+						$('#wall').AddWallAnimation(properties);
+					}
+				}
+			]);
+
+
+/*				if(properties !== undefined){
+					$('#wall').AddWallAnimation(properties);
+				}*/
+				
 	
 });
 	</script>

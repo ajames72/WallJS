@@ -77,6 +77,9 @@ module.exports = function(grunt) {
           },
           {
             cwd: 'node_modules/requirejs/', src: ['require.js'], dest: 'dist/js/requirejs/', expand: true
+          },
+          {
+            cwd: 'node_modules/simplestatemanager/dist/', src: ['ssm.min.js'], dest: 'dist/js/simplestatemanager/dist/', expand: true
           }
         ]
       }

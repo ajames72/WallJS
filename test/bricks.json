@@ -1,0 +1,52 @@
+{"frames": {
+
+"brick_old_03.png":
+{
+	"frame": {"x":2,"y":2,"w":225,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":225,"h":74},
+	"sourceSize": {"w":227,"h":75}
+},
+"brick_old_1_03.png":
+{
+	"frame": {"x":229,"y":2,"w":225,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":225,"h":74},
+	"sourceSize": {"w":227,"h":75}
+},
+"brick_old_2_03.png":
+{
+	"frame": {"x":2,"y":78,"w":225,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":225,"h":74},
+	"sourceSize": {"w":227,"h":75}
+},
+"brick_old_4_03.png":
+{
+	"frame": {"x":229,"y":78,"w":225,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":225,"h":74},
+	"sourceSize": {"w":227,"h":75}
+},
+"brick_old_5_03.png":
+{
+	"frame": {"x":2,"y":154,"w":225,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":1,"w":225,"h":74},
+	"sourceSize": {"w":227,"h":75}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "brickimgs/bricks.png",
+	"format": "RGBA8888",
+	"size": {"w":456,"h":230},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:15febecc2865e08c36e397e6af302d77:c7b6e019821bf50f5e39d58545bad557:1f1d922f5e3ed27cd1e72a3c7a962fe1$"
+}
+}
