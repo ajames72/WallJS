@@ -101,10 +101,22 @@ define(['require', 'jQuery', 'PIXI', 'Wall', 'Brick', 'BrickTexture'], function 
 				// * 4 - this is the speed of the fade
 				expectedSize *= StartButton.speed;
 				
-				spriteTexturesArray = StartButton.setSpriteTextures();
+				spriteTexturesArray = StartButton.setFrameRate(StartButton.spriteSheet.spriteNameList, StartButton.speed);
 				
 				expect(spriteTexturesArray.length).toBe(expectedSize);
 			});
+			
+			it("should only allow fade in", function(){
+				var spriteTexturesArray = [];
+				var expectedSize = StartButton.spriteSheet.spriteNameList.length;
+				// * 4 - this is the speed of the fade
+				expectedSize *= StartButton.speed;
+				
+				spriteTexturesArray = StartButton.setFrameRate(StartButton.spriteSheet.spriteNameList, StartButton.speed, false);
+				
+				expect(spriteTexturesArray.length).toBe(expectedSize);
+			});
+			
 		});
 	});
 
