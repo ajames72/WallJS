@@ -8,7 +8,7 @@
 	<div id="app">
 
 	</div>
-	<section id="wall" style="width: 600px;">
+	<section id="wall" style="width: 100%;">
 		<div id="wallCanvas"></div>
 	</section>
 	<script type="text/javascript" src="../dist/js/wall.min.js"></script>
@@ -18,7 +18,7 @@
 	requirejs.config({
 		baseUrl: '../dist/js',
 	});
-
+	
 	//Configuration
 	require(['jQuery', 'ssm', 'Wall'], function($, ssm) {
 
@@ -163,6 +163,9 @@
 									"brickHi_A8.png",
 								],
 								speed: 4
+							},
+							canvas: {
+								width: $('#wall').width()
 							}
 						};
 

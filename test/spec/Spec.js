@@ -24,6 +24,74 @@ define(['require', 'jQuery', 'PIXI', 'Wall', 'Brick', 'BrickTexture'], function 
 		});
 	});
 	
+	describe("Wall", function(){
+		describe("Wall Settings", function(){
+			
+			var properties;
+			
+			beforeEach(function(){
+				properties = {
+					// The rows and width is measured in the number of icons
+					wallRows: 6,
+					wallCols: 10,
+					// This is the icon in the wall where the start button should overlay
+					startRow: 2,
+					startCol: 3,
+					// The img src path is relative to the html page
+					textureSrc: [
+						'img/Bricks/brick_old_03.png',
+						'img/Bricks/brick_old_1_03.png',
+						'img/Bricks/brick_old_2_03.png',
+						'img/Bricks/brick_old_4_03.png',
+						'img/Bricks/brick_old_5_03.png'
+					],
+					// The texture height and width of the textureSrc.
+					// This can be smaller that the actual height and width in order to overlap icons
+					textureWidth: 225,
+					textureHeight: 70,
+					// The xRowOffset offsets every second row to give brick laying effect
+					xRowOffset: -100,
+					// The yRowOffset 
+					yRowOffset: 35,
+					startButtonSpriteSheet: {
+						spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
+						spriteNameList : [
+							"brickHi_A1.png",
+							"brickHi_A2.png",
+							"brickHi_A3.png",
+							"brickHi_A4.png",
+							"brickHi_A5.png",
+							"brickHi_A6.png",
+							"brickHi_A7.png",
+							"brickHi_A8.png",
+						],
+						speed: 4
+					},
+					canvas: {
+						height: '100px',
+						width: '200px'
+					}
+				};
+				
+				Wall.initialize(properties);
+				
+			});
+			
+			afterEach(function(){
+			
+			});
+			
+			it("should test wall canvas height", function(){
+				expect(Wall.wallHeight()).toBe(100);
+			});
+			
+			it("should test wall canvas width", function(){
+				expect(Wall.wallWidth()).toBe(200);
+			});
+			
+		});
+	});
+	
 	describe("StartButton", function(){
 	
 		var StartButton = require('StartButton');
