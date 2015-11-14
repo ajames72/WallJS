@@ -1,7 +1,7 @@
 # WallJS
 
 WallJS is a splash page animation, which uses PIXI 2D Renderer _(http://www.pixijs.com)_
-
+This animates at 25 frames per second.
 ## Getting Started
 
 ### Images
@@ -10,7 +10,8 @@ WallJS has two sets of images that make up the Wall; the Start Button and the Wa
 #### Start Button animation
 The user clicks the Start Button to trigger the animation. This animation is used to draw the user to click.
 The start button can be a static image (not animating) or a Texture sheet (see below about the PIXI Sprite Sheet) and should be installed in the <em>img/BrickHilight</em> directory.
-The _spriteNameList_ references the frames and enables the order of the frames to be set.
+##### Configuring the Start Button animation
+The _startButtonSpriteSheet_ object is used to configure the Start Button animation, as shown below.
 ```javascript
 startButtonSpriteSheet: {
   spriteSheetLoader : ["img/BrickHilight/brickhilight.json"],
@@ -27,6 +28,9 @@ startButtonSpriteSheet: {
   speed: 10
 }
 ```
+- _spriteSheetLoader:_ This JSON configuration file references the sprite sheet frames.
+- _spriteNameList:_  This is an array that references each frame and enables the order of the frames to be set. These names must match this in the spriteSheetLoader JSON file.
+- _speed:_ This sets the speed of the animation. This can be omitted if there is not speed required.
 
 #### Wall Images
 The Wall images are displayed randomly displayed throughout the wall.
