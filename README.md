@@ -1,18 +1,16 @@
 # WallJS
 
-Intro...
+WallJS is a splash page animation
+Uses PIXI 2D Renderer _(http://www.pixijs.com)_
 
 ## Getting Started
 
 ### Images
+WallJS has two sets of images that make up the Wall; the Start Button and the Wall images.
 
-PIXI
-
-#### Start Button graphic
-
-##### PIXI Sprite sheet.
-The sprite sheet is created using Texture Packer _(http://www.codeandweb.com/texturepacker)_
-This produces a JSON frame reference file and tps sprite sheet.
+#### Start Button animation
+The user clicks the Start Button to trigger the animation. This animation is used to draw the user to click.
+The start button can be a static image (not animating) or a Texture sheet (see below about the PIXI Sprite Sheet) and should be installed in the img/BrickHilight directory.
 The _spriteNameList_ references the frames and enables the order of the frames to be set.
 ```javascript
 startButtonSpriteSheet: {
@@ -30,6 +28,23 @@ startButtonSpriteSheet: {
   speed: 10
 }
 ```
+
+#### Wall Images
+The Wall images are displayed randomly displayed throughout the wall.
+These images should be added to the img/Bricks directory
+```javascript
+textureSrc: [
+  'img/Bricks/brick_old_03.png',
+  'img/Bricks/brick_old_1_03.png',
+  'img/Bricks/brick_old_2_03.png',
+  'img/Bricks/brick_old_4_03.png',
+  'img/Bricks/brick_old_5_03.png'
+],
+```
+##### PIXI Sprite sheet.
+The sprite sheet is created using Texture Packer _(http://www.codeandweb.com/texturepacker)_
+This produces a JSON frame reference file and tps sprite sheet.
+
 ### Adding to your page
 
 #### Example
