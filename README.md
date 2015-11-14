@@ -1,7 +1,6 @@
 # WallJS
 
-WallJS is a splash page animation
-Uses PIXI 2D Renderer _(http://www.pixijs.com)_
+WallJS is a splash page animation, which uses PIXI 2D Renderer _(http://www.pixijs.com)_
 
 ## Getting Started
 
@@ -10,7 +9,7 @@ WallJS has two sets of images that make up the Wall; the Start Button and the Wa
 
 #### Start Button animation
 The user clicks the Start Button to trigger the animation. This animation is used to draw the user to click.
-The start button can be a static image (not animating) or a Texture sheet (see below about the PIXI Sprite Sheet) and should be installed in the img/BrickHilight directory.
+The start button can be a static image (not animating) or a Texture sheet (see below about the PIXI Sprite Sheet) and should be installed in the <em>img/BrickHilight</em> directory.
 The _spriteNameList_ references the frames and enables the order of the frames to be set.
 ```javascript
 startButtonSpriteSheet: {
