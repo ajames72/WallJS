@@ -36,6 +36,7 @@ startButtonSpriteSheet: {
 - _spriteSheetLoader:_ This JSON configuration file references the sprite sheet frames.
 - _spriteNameList:_  This is an array that references each frame and enables the order of the frames to be set. These names must match this in the spriteSheetLoader JSON file.
 - _speed:_ This sets the speed of the animation. This can be omitted if there is not speed required.
+
 ##### PIXI Sprite sheet.
 The sprite sheet is created using Texture Packer _(http://www.codeandweb.com/texturepacker)_
 This produces a JSON frame reference file and tps sprite sheet.
@@ -58,6 +59,7 @@ textureHeight: 70,
 - _textureWidth:_ This is the width in pixels of each icon.
 - _textureHeight:_ This is the height in pixels of each icon.
 <em>NB</em> The icons should be of a uniform height and width, different sizes are not supported.
+
 ### Other Settings
 - _wallRows:_ This is the height in icons of the wall animation.
 - _wallCols:_ This is the width in icons of the wall animation.
@@ -96,6 +98,7 @@ The animation is added using the following jQuery function:
 ```javascript
 $('#wall').AddWallAnimation(properties);
 ```
+
 #### Responsiveness
 The wall animation can be adapted depending on screen size.
 ```javascript
@@ -142,6 +145,7 @@ ssm.addStates([
   }
 ]);
 ```
+
 #### Example
 ```javascript
 <!DOCTYPE html>
