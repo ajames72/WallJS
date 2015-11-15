@@ -65,7 +65,8 @@ textureHeight: 70,
 - _wallCols:_ This is the width in icons of the wall animation.
 - _xRowOffset:_ This is used to stagger the x position of alternate row icons, giving the wall laying effect.
 - _yRowOffset:_ This is used to shift the top of the wall icons. <em>NB</em> It doesn't overlay the y co-ordinate of each row but the animation as a whole.
-- _canvas:_ This is an optional property that can be used to specify the width of the animation area. e.g. ```javascript
+- _canvas:_ This is an optional property that can be used to specify the width of the animation area. e.g.
+```javascript
 canvas: {
   width: $('#wall').width()
 }
